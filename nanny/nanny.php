@@ -44,7 +44,7 @@
                 <input type="text" name="qualification" value="" placeholder="qualification">
                 <input type="date" name="dob" style="width: 93%;padding: 12px;" value="" placeholder="dob">
 				<input type="text" name="requirements" value="" placeholder="Your requirements">		
-
+                
 				<button type="submit" class="btn" name="create_btn">SUBMIT</button>
 
 			</form>
