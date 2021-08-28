@@ -8,7 +8,7 @@
  ?>
 
 <?php include('includes/head_section.php'); ?>
-	<title>Parking Bookings</title>
+	<title>Nanny Bookings</title>
 </head>
 <body>
 <!-- User navbar -->
@@ -33,6 +33,7 @@
 						<th>qualification</th>
 						<th>dob</th>
                         <th>requirements</th>
+						<th>Book</th>
 </thead>
 <tbody>
 <?php
@@ -64,7 +65,7 @@
 				 <td>$qualification</td>
 				 <td>$dob</td>
                  <td>$requirements</td>
-
+                 <td><button type='submit' class='btn' name='login_btn'>BOOK</button></td>
 			 </tr>
 
 				 ";
@@ -81,7 +82,7 @@
 	
 	
 </table>
-<button type="submit" class="btn" name="login_btn">BOOK</button>
+
 </div>
 
 		

@@ -25,20 +25,20 @@
 		<?php include(ROOT_PATH . '/Pusers/includes/menu.php') ?>
 <form method="POST">
 <?php include(ROOT_PATH . '../includes/messages.php') ?>
-	<select id="country" name="Day">
-		<option value="" selected disabled>Day Of the Week</option>
-      <option value="Monday">Monday</option>
-      <option value="Tuesday">Tuesday</option>
-      <option value="Wednesday">Wednesday</option>
-      <option value="Thursday">Thursday</option>
-      <option value="Friday">Friday</option>
-      <option value="sarturday">sarturday</option>
+	<select id="" name="">
+		<option value="" selected disabled>ID of nanny</option>
+      <option value=""></option>
+      <option value=""></option>
+      <option value=""></option>
+      <option value=""></option>
+      <option value=""></option>
+      <option value=""></option>
     </select>
-    <select id="country" name="Department">
-		<option value="" selected disabled>Department</option>
-      <option value="Lecturer">Lecturer</option>
-      <option value="student">Student</option>
-      <option value="Staff">Staff</option>
+    <select id="" name="">
+		<option value="" selected disabled>Name of Nanny</option>
+      <option value=""></option>
+      <option value=""></option>
+      <option value=""></option>
     </select>
 
     <label for="subject">Feedback</label>

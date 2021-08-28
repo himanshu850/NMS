@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>View feedback</title>
+	<title>Update Profile</title>
 </head>
 <body>
 <?php include('includes/navbar.php') ;?>
@@ -27,9 +27,13 @@
                         <th>gender</th>
                         <th>nanny_type</th>
                         <th>requirements</th>
+						<th>Action</th>
 </thead>
 <tbody>
 <?php
+if (isset($_POST['updateprofile'])){
+     header('location: updateuserprofile.php');
+}
     $user_id = $_SESSION['user']['UserID'];
 	$sql3 = "SELECT * FROM parent WHERE userNo = '$user_id' ";
 	$result3 = $conn->query($sql3);
@@ -44,21 +48,23 @@
                  $gender=$rec['gender'];
                  $nanny_type=$rec['nanny_type'];
                  $requirements=$rec['requirements'];
-		echo "
+				 ?>
+		<form method="post" action="updateprofile.php" >
 				 <tr>
-				 <td>$userNo</td>
-				 <td>$child_name</td>
-				 <td>$email</td>
-				 <td>$phone_no</td>
-				 <td>$address</td>
-                 <td>$gender</td>
-                 <td>$nanny_type</td>
-                 <td>$requirements</td>
+				 <td><?php echo $userNo ?></td>
+				 <td><?php echo $child_name ?></td>
+				 <td><?php echo $email ?></td>
+				 <td><?php echo $phone_no ?></td>
+				 <td><?php echo $address ?></td>
+                 <td><?php echo $gender ?></td>
+                 <td><?php echo $nanny_type ?></td>
+                 <td><?php echo $requirements ?></td>
+				 <td><input type="submit" name ='updateprofile' value="update"></td>
 
 			 </tr>
-
-				 ";
-			}
+		 </form>
+			<?php
+				} 
 
 		}
 		else{
