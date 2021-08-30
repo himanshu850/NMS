@@ -50,26 +50,24 @@
 				<table class="table">
 					<thead>
 						<th>Booking ID</th>
-						<th>Slot</th>
 						<th>User ID</th>
-							<th>User</th>
-
+						<th>User Name</th>
+						<th>Slot</th>
 					</thead>
 					<tbody>
 					<?php
-					$sql3 = "SELECT * FROM bookings ";
+					$conn = mysqli_connect("localhost", "root", "", "parking");
+					$sql3 = "SELECT * FROM bookings  ";
 					$result3 = $conn->query($sql3);
 
 				while($rec = $result3->fetch_assoc()): ?>
 						<tr>
 							<td><?php echo $rec['ID']; ?></td>
-							<td>
-								<?php echo $rec['slot']; ?>
-							</td>
 							<td><?php echo $rec['useri']; ?></td>
 							<td><?php echo $rec['usern']; ?></td>
-
+							<td><?php echo $rec['slot']; ?></td>
 						</tr>
+						?>
 					<?php endwhile ?>
 					</tbody>
 				</table>

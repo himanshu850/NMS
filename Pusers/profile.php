@@ -22,7 +22,7 @@
 
   // Ensure that no user is registered twice.
   // the email and usernames should be unique
-  $sql = "INSERT INTO parent (userNo,child_name,email, phone_no, address, gender, nanny_type, requirements)
+  $sql = "INSERT INTO parent (`userNo`,`child_name`,`email`, `phone_no`, `address`, `gender`, `nanny_type`, `requirements`)
                       VALUES('$userNo','$child_name','$email','$phone_no','$address','$gender','$nanny_type', '$requirements')";
 
     $conn = mysqli_connect("localhost", "root", "", "nanny");

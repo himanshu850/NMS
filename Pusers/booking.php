@@ -23,18 +23,18 @@
 		?>
 	<table class="table" style="width: 50%;">
 						<thead>
-						<th>userNo</th>
-						<th>name</th>
-						<th>email</th>
-						<th>phone_no</th>
-						<th>gender</th>
-                        <th>address</th>
-                        <th>nationality</th>
-						<th>qualification</th>
-						<th>dob</th>
-                        <th>requirements</th>
-						<th>Book</th>
+						<th>UserNo</th>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Phone_no</th>
+						<th>Gender</th>
+                        <th>Address</th>
+                        <th>Nationality</th>
+						<th>Qualification</th>
+						<th>Dob</th>
+                        <th>Requirements</th>
 						<th>Status</th>
+						<th>Book</th>
 </thead>
 <tbody>
 <?php
@@ -55,32 +55,51 @@
 				 $dob=$rec['dob'];
                  $requirements=$rec['requirements'];
 				 $Status=$rec['Status'];
-		echo "
+				 ?>
+		<form method="post" action="" >
 				 <tr>
-				 <td>$userNo</td>
-				 <td>$name</td>
-				 <td>$email</td>
-				 <td>$phone_no</td>
-				 <td>$gender</td>
-                 <td>$address</td>
-                 <td>$nationality</td>
-				 <td>$qualification</td>
-				 <td>$dob</td>
-                 <td>$requirements</td>
-				 <td>$Status</td>
-                 <td><button type='submit' class='btn' name='login_btn'>BOOK</button></td>
+				 <td><?php echo$userNo?></td>
+				 <td><?php echo$name?></td>
+				 <td><?php echo$email?></td>
+				 <td><?php echo$phone_no?></td>
+				 <td><?php echo$gender?></td>
+                 <td><?php echo$address?></td>
+                 <td><?php echo$nationality?></td>
+				 <td><?php echo$qualification?></td>
+				 <td><?php echo$dob?></td>
+                 <td><?php echo$requirements?></td>
+				 <td><?php echo$Status?></td>
+                 <td><button type= "submit" class="btn" name="book_btn"> BOOK </button></td>
 			 </tr>
-
-				 ";
-			}
-
+			 </form>
+			<?php
+				} 
 		}
 		else{
 			echo $conn->error;
 		}
 
 		?>
+		<?php
+		if(isset($_POST['book_btn'])){
+			$Status=$_POST['Status'];
+			$conn = mysqli_connect("localhost", "root", "", "nanny");
+            $user_id = $_SESSION['user_nanny']['UserID'];
+			$sql3 = "UPDATE `nanny_profile` SET `Status`= 'booked' WHERE UserNo = '$user_id'";
 		
+		if(mysqli_query($conn,$sql3)){
+            ?>
+            <script>
+                window.alert("you have successfully updated your profile");
+                
+            </script>
+			           <?php
+
+
+}
+}
+	?>
+	
 	</tbody>
 	
 	

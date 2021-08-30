@@ -19,14 +19,14 @@
 <center><h1>User Profile<h1></center>
 	<table class="table">
 						<thead>
-						<th>userNo</th>
-						<th>child_name</th>
-						<th>email</th>
-						<th>phone_no</th>
-						<th>address</th>
-                        <th>gender</th>
-                        <th>nanny_type</th>
-                        <th>requirements</th>
+						<th>UserNo</th>
+						<th>Child_name</th>
+						<th>Email</th>
+						<th>Phone_no</th>
+						<th>Address</th>
+                        <th>Gender</th>
+                        <th>Nanny_type</th>
+                        <th>Requirements</th>
 						<th>Action</th>
 </thead>
 <tbody>
@@ -59,7 +59,7 @@ if (isset($_POST['updateprofile'])){
                  <td><?php echo $gender ?></td>
                  <td><?php echo $nanny_type ?></td>
                  <td><?php echo $requirements ?></td>
-				 <td><input type="submit" name ='updateprofile' value="update"></td>
+				 <td><input type="submit" name ='updateprofile' value="Update"></td>
 
 			 </tr>
 		 </form>

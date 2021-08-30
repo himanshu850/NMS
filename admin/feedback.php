@@ -26,7 +26,7 @@
 </thead>
 <tbody>
 <?php
- 
+    $conn = mysqli_connect("localhost", "root", "", "parking");
 	$sql3 = "SELECT * FROM feedback ";
 	$result3 = $conn->query($sql3);
 	if ($result3) {

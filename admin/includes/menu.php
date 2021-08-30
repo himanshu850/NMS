@@ -5,8 +5,8 @@
 		</div>
 		<div class="card-content">
 			<a href="<?php echo BASE_URL . 'admin/users.php' ?>">Manage Users</a>
-			<a href="<?php echo BASE_URL . 'admin/bookings.php' ?>">View Bookings</a>
-			<a href="<?php echo BASE_URL . 'admin/feedback.php' ?>">Check Feedback</a>
+			<!-- <a href="<?php echo BASE_URL . 'admin/bookings.php' ?>">View Bookings</a> -->
+			<!-- <a href="<?php echo BASE_URL . 'admin/feedback.php' ?>">Check Feedback</a> -->
 		</div>
 	</div>
 </div>

@@ -66,18 +66,18 @@
 <form method="post" action="updateuserprofile.php" >
 
 	
-				<input type="number"   style="width: 95%;padding: 12px;border-radius: 2px;"name="userNo" value="<?php if(!empty($_SESSION['user'])){echo $_SESSION['user']['UserID'];} ?>" placeholder="User ID">
+				<input type="number"   style="width: 95%;padding: 12px;border-radius: 2px;"name="userNo" value="<?php if(!empty($_SESSION['user'])){echo $_SESSION['user']['UserID'];} ?>" selected disabled placeholder="User ID">
 				<input type="text" name="child_name"  placeholder="Full Name" value="<?php if(!empty($_SESSION['user'])){echo $_SESSION['user']['username'];} ?>" >
 				<input type="text" name="email" value="<?php echo $rec['email']?>" placeholder="Email address">
 				<input type="text" name="phone_no" value="<?php echo $rec['phone_no']?>" placeholder="Phone Number">
 				<input type="Address"  style="width: 95%;padding: 12px;border-radius: 2px;" name="address" value="<?php echo $rec['address']?>" placeholder="Address">
 				<select class="gender" required name="gender">
-			        <option value="" ><?php echo $rec['gender']?></option>
+			        <option><?php echo $rec['gender']?></option>
 			        <option value="Male">Male</option>
 			        <option value="Female">Female</option>
 	            </select>
 			    <select class="role" required name="nanny_type">
-			          <option value="" ><?php echo $rec['nanny_type']?></option>
+			          <option><?php echo $rec['nanny_type']?></option>
 			        <option value="fullTime">Full Time</option>
 			         <option value="PartTime">Part_time</option>
 	            </select>

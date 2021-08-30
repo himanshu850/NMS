@@ -28,7 +28,7 @@
 			<a href="slots.php" class="first">
 				<span>					
 					<?php 
-					$sql3 = "SELECT * FROM parking_slot";
+					$sql3 = "SELECT * FROM nanny_profile";
 									$result3 = $conn->query($sql3);
 									$cnt =0;
 									if ($result3) {
@@ -46,7 +46,7 @@
 
 					 <?php echo $cnt; ?>
 				</span> <br>
-				<span>Parking Slots</span>
+				<span>Total Number Of Nannies</span>
 			</a>
 			<a href="users.php">
 				<span>
@@ -73,10 +73,10 @@
 				</span> <br>
 				<span>Registered Users</span>
 			</a>
-			<a>
+			<a href="bookings.php">
 				<span>
 						<?php 
-						$sql3 = "SELECT * FROM sticker";
+						$sql3 = "SELECT * FROM parent";
 									$result3 = $conn->query($sql3);
 									$cnt =0;
 									if ($result3) {
@@ -96,7 +96,7 @@
 
 
 				</span> <br>
-				<span>Total Booked Stickers</span>
+				<span>Total Number Of Parents.</span>
 			</a>
 		</div>
 		<br><br><br>

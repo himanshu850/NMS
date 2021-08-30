@@ -5,6 +5,19 @@
 <?php include('includes/head_section.php'); ?>
 
 <title>Nanny Management System | Sign up </title>
+<style type="text/css">
+  body{
+    background-image:url(static/images/earth.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+  }
+  .content{
+    background: white;
+    width: 50%;
+    padding: 40px:
+    margin: 100px auto;
+  }
+  </style>
 </head>
 <body>
     <!-- Navbar -->
