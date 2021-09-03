@@ -69,7 +69,7 @@
 				 <td><?php echo$dob?></td>
                  <td><?php echo$requirements?></td>
 				 <td><?php echo$Status?></td>
-                 <td><button type= "submit" class="btn" name="book_btn"> BOOK </button></td>
+                 <td><a href="book.php?book=<?php echo $userNo['userNo']?>"> BOOK </button></td>
 			 </tr>
 			 </form>
 			<?php
@@ -80,25 +80,8 @@
 		}
 
 		?>
-		<?php
-		if(isset($_POST['book_btn'])){
-			$Status=$_POST['Status'];
-			$conn = mysqli_connect("localhost", "root", "", "nanny");
-            $user_id = $_SESSION['user_nanny']['UserID'];
-			$sql3 = "UPDATE `nanny_profile` SET `Status`= 'booked' WHERE UserNo = '$user_id'";
-		
-		if(mysqli_query($conn,$sql3)){
-            ?>
-            <script>
-                window.alert("you have successfully updated your profile");
-                
-            </script>
-			           <?php
-
-
-}
-}
-	?>
+	    <?php
+?>
 	
 	</tbody>
 	

@@ -14,8 +14,8 @@
 
  //message
  $mail ->Subject='NMS';
- $mail ->Body='';
+ $mail ->Body='this is to inform you that you have been chosen as a nanny!';
 
- $mail ->addAddress('himanshupparmar824@gmail.com');
+ $mail ->addAddress('gesareayienda@gmail.com');
  $mail ->send();
 ?>

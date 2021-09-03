@@ -1,25 +1,19 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "parking");
-$uid = $_POST['id'];
-$unm = $_POST['unm'];
-$slot = $_POST['slot'];
-echo $uid." ".$slot;
+$conn = mysqli_connect("localhost", "root", "", "nanny");
 
-	$sql = "INSERT INTO bookings (useri,usern,slot,start) VALUES('$uid','$unm','$slot',now())";
-  if ($conn->query($sql)) {
-    header("Location:booking.php?state='Success'");
-  }
-	else{
-		echo "The slot is already booked";
-		header("location:booking.php");
+
+	
+	if(isset($_GET['userNo'])){
+		$Status=$_GET['userNo'];
+		
+		
+		$update = "UPDATE `nanny_profile` SET `Status`= 'booked' WHERE  `userNo` = '$Status'";
+	    $query = mysqli_query($conn,$update);
+	if($query){
+         echo "<script>alert('Nanny has been booked')</script>";
+	}else{
+		echo"<script>alert('Unknown error has occured')</script>";
 	}
-
-
-
-if (!empty($slot)) {
-$sql3 = "UPDATE `parking_slot` SET `Status`='Booked' WHERE SlotID ='$slot' ";
-
-$conn->query($sql3);
-}
-
- ?>
+	}	
+	?>
+ 

@@ -24,7 +24,7 @@
     </div>
     <?php
 
-if (isset($_POST['$submit'])) {	
+if (isset($_POST['$Submit'])) {	
 	$userNo= $_POST['userNo'];
 	$name=$_POST['name'];
 	$feedback=$_POST['feedback'];
