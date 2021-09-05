@@ -4,16 +4,15 @@ $con = mysqli_connect("localhost","root","","nanny");
 
 if (isset($_POST['upload'])) {
 
-    $file = $_FILES['image']['name'];
-
-    $query = "INSERT INTO upload (`image`) VALUES('$file')";
-
+    $file =  addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
+    $query = "INSERT INTO `upload` (`image`) VALUES ('$file')";
     $res = mysqli_query($con,$query);
-
-    if ($res) {
-        move_uploaded_file($_FILES['image']['tmp_name'], "$file");
-
-    }
+if($res){
+    echo '<script> alert("image uploaded")</script>';
+}else{
+    echo '<script> alert("image NOT uploaded")</script>';
+}
+    
 }
 ?>
 <!DOCTYPE html>
@@ -30,7 +29,7 @@ if (isset($_POST['upload'])) {
                <div class="col-md-6">
                    <h3 class="text-center">ULPOAD IMAGE</h3>
 
-                   <form class="my-5" method="post" enctype="multipart/form-data">
+                   <form class="my-5" action="../nanny/image.php" method="post" enctype="multipart/form-data">
                        <input type="file" name="image" class="form-control">
                        <input type="submit" name="upload" value="UPLOAD" class="btn btn-success my-3">
                    </form>
@@ -38,17 +37,19 @@ if (isset($_POST['upload'])) {
                <div class="col-md-6">
                    <h3 class="text-center">DISPLAY IMAGE</h3>
                    <?php
-                   $sel = "SELECT * FROM upload";
+                   $sel = "SELECT * FROM `upload`";
                    $que = mysqli_query($con,$sel);
 
-                   $output = "";
-
-                   if(mysqli_num_rows($que) < 1){
-                       $output .="<h3 class='text-center'>`No image uploaded`</h3>";
-                   } 
-                   while($row = mysqli_fetch_array($que)){
-                       $output .= "<img src='" .$row['image'] . "' class='my-3'  
-                       style='width:50px;height:50px;'>";  
+                 
+                   
+                   while($row = mysqli_fetch_array($que))
+                   {
+                      ?>
+                      <tr>
+                          <td> <?php echo $row['id']; ?></td>
+                          <td> <?php echo '<img src ="data:image;base64,'.base64_encode($row['image']).'" alt="Image" style="width: 100%; height: 100%;" >'; ?></td> 
+                      </tr>
+                      <?php
                    }
                    ?>
                </div>

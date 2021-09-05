@@ -6,7 +6,8 @@
 		header('location:../login.php');
 	}
  ?>
-
+<head>
+<meta charset="UTF-8">
 <?php include('includes/head_section.php'); ?>
 	<title>Nanny Bookings</title>
 </head>
@@ -17,6 +18,9 @@
 	<div class="container content" >
 		<!-- Left side menu -->
 		<?php include('includes/menu.php') ?>
+		<p style="font-size:48px" float: left;> &#128151; </></p><center><h1 class="page-title">Choose Your Preffered Nanny</h1></center><p style="font-size:48px" float:right;> &#128151;</p>
+		
+		
 		<?php
 			$conn = mysqli_connect("localhost", "root", "", "nanny");
 	
@@ -56,7 +60,7 @@
                  $requirements=$rec['requirements'];
 				 $Status=$rec['Status'];
 				 ?>
-		<form method="post" action="" >
+		<form method="post" action="book.php" >
 				 <tr>
 				 <td><?php echo$userNo?></td>
 				 <td><?php echo$name?></td>
@@ -69,7 +73,7 @@
 				 <td><?php echo$dob?></td>
                  <td><?php echo$requirements?></td>
 				 <td><?php echo$Status?></td>
-                 <td><a href="book.php?book=<?php echo $userNo['userNo']?>"> BOOK </button></td>
+                 <td><button><a href="book.php?book=<?php echo $userNo?>"> BOOK </button></td>
 			 </tr>
 			 </form>
 			<?php
@@ -84,7 +88,10 @@
 ?>
 	
 	</tbody>
-	
+	<style>
+		 table,th, td { border-collapse: collapse; width: 70%; margin: 20px auto;
+ text-align: center; padding: 8px; text-align: left; border: 2px solid black; } 
+	     </style>
 	
 </table>
 
