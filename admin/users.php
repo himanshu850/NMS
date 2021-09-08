@@ -16,14 +16,14 @@
 
 	$conn->query($sql3);
 	}
-	if (!empty($_GET['edit-guard'])) {
-		$rr = $_GET['edit-guard'];
+	if (!empty($_GET['edit-parent'])) {
+		$rr = $_GET['edit-parent'];
 	$sql3 = "UPDATE `users` SET `role`='parent' WHERE UserID ='$rr' ";
 
 	$conn->query($sql3);
 	}
-	if (!empty($_GET['edit-pu'])) {
-		$rr = $_GET['edit-pu'];
+	if (!empty($_GET['edit-nanny'])) {
+		$rr = $_GET['edit-nanny'];
 	$sql3 = "UPDATE `users` SET `role`='nanny' WHERE UserID ='$rr' ";
 
 	$conn->query($sql3);
@@ -101,7 +101,7 @@
 				<table class="table">
 					<thead>
 						<th>UserID</th>
-						<th>UserType</th>
+						<th>UserName,UserEmail</th>
 						<th>Role</th>
 						<th colspan="2">Action</th>
 					</thead>
@@ -116,13 +116,13 @@
 							<td><?php echo $admin['role']; ?></td>
 							<td class="fl" >
 								<a class=" ed fa fa-pencil btn edit"
-									href="users.php?edit-admin=<?php echo $admin['UserID']; ?>">Admin
+									href="users.php?edit-admin=<?php echo $admin['UserID']; ?>">A
 								</a>
 								<a class=" ed fa fa-pencil btn edit"
-									href="users.php?edit-pu=<?php echo $admin['UserID']; ?>">Nanny
+									href="users.php?edit-parent=<?php echo $admin['UserID']; ?>">P
 								</a>
 								<a class=" ed  fa fa-pencil btn edit"
-									href="users.php?edit-guard=<?php echo $admin['UserID']; ?>">Parent
+									href="users.php?edit-nanny=<?php echo $admin['UserID']; ?>">N
 								</a>
 							</td>
 							<td>

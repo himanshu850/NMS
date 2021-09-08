@@ -3,8 +3,8 @@
 $admin_id = 0;
 $isEditingUser = false;
 $username = "";
-$role = "";
 $email = "";
+$role = "";
 // general variables
 $errors = [];
 
@@ -50,8 +50,8 @@ function createAdmin($request_values){
 	// register user if there are no errors in the form
 	if (count($errors) == 0) {
 		$password = md5($password);//encrypt the password before saving in the database
-		$query = "INSERT INTO users (username, email, role, password, created_at, updated_at)
-				  VALUES('$username', '$email', '$role', '$password', now(), now())";
+		$query = "INSERT INTO users (username, email, role, password)
+				  VALUES('$username', '$email', '$role', '$password')";
 		mysqli_query($conn, $query);
 
 		$_SESSION['message'] = "New User has been added successfully";

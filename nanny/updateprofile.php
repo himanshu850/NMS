@@ -1,4 +1,5 @@
 <!-- // this code is used to get the details of a user from the db. -->
+<?php require 'function.php'?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,20 +15,7 @@
 }>
 
  <center><h1>User Profile<h1></center>
-	<!-- <table class="table">
-						<thead>
-						<th>UserNo</th>
-						<th>Name</th>
-						<th>Email</th>
-						<th>Phone_no</th>
-						<th>Gender</th>
-                        <th>Address</th>
-                        <th>Nationality</th>
-                        <th>Qualification</th>
-                        <th>Dob</th>
-                        <th>Requirements</th>
-						<th>Action</th>
-</thead> -->
+
 <tbody>
 <?php
     $user_id = $_SESSION['user_nanny']['UserID'];
@@ -37,11 +25,11 @@
  	if ($result3) {
  		 while($rec = $result3->fetch_assoc()) {
 			 
- 				 $userNo= $rec['userNo'];
- 				 $name=$rec['name'];
- 				 $email=$rec['email'];
- 				 $phone_no=$rec['phone_no'];
- 				 $gender=$rec['gender'];
+ 				  $userNo= $rec['userNo'];
+ 				  $name=$rec['name'];
+ 				  $email=$rec['email'];
+ 				  $phone_no=$rec['phone_no'];
+ 				  $gender=$rec['gender'];
                   $address=$rec['address'];
                   $nationality=$rec['nationality'];
                   $qualification=$rec['qualification'];
@@ -59,7 +47,7 @@
  		?> 
 		<?php 
         if(isset($_POST['updateprofile'])){
-            //$name=$_POST['name'];
+            $name=$_SESSION['user_nanny']['username'];
             $email=$_POST['email'];
             $phone_no=$_POST['phone_no'];
 			$gender=$_POST['gender'];

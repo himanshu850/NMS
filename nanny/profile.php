@@ -1,4 +1,5 @@
 <?php
+$con = mysqli_connect("localhost","root","","nanny");
   //$image = $_POST['image'];
   $userNo = $_POST['userNo'];
   $name = $_POST['name'];
@@ -28,20 +29,22 @@
 
   // Ensure that no user is registered twice.
   // the email and usernames should be unique
-  $sql = "INSERT INTO nanny_profile (`userNo`, `name`,`email`, `phone_no`, `gender`,`address`,`nationality`, `qualification`,`dob`, `requirements`)
-                      VALUES('$userNo','$name','$email','$phone_no','$gender','$address','$nationality','$qualification','$dob', '$requirements')";
+  
+
+
+
+
+    $sql = "INSERT INTO nanny_profile (`userNo`, `name`,`email`, `phone_no`, `gender`,`address`,`nationality`, `qualification`,`dob`, `requirements`)
+                                VALUES('$userNo','$name','$email','$phone_no','$gender','$address','$nationality','$qualification','$dob', '$requirements')";
 
     $conn = mysqli_connect("localhost", "root", "", "nanny");
     if ($conn->query($sql)) {
-      $_SESSION['message'] = "You have Successfully filled in the form.";
+     $_SESSION['message'] = "You have Successfully filled in the form.";
       header('location: updateprofile.php');
       // code...
     }
     else {
       echo $conn->error;
     }
-
-
-
-
- ?>
+      
+  ?>

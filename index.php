@@ -22,6 +22,21 @@
     padding: 40px:
     margin: 100px auto;
   }
+  header{
+      background: white;
+      text-align: center;
+  }
+  .tm-address-box{
+    background: white;
+    height: 280px;
+  }
+  .mt-5{
+    background: white;
+  }
+  .image fit{
+      height: 100px;
+      
+  }
   </style>
     <!--
 
@@ -85,7 +100,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link tm-text-gray" href="#tm-section-2">Info</a>
+                            <a class="nav-link tm-text-gray" href="#tm-section-5">Info</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link tm-text-gray" href="#tm-section-6">Contact</a>
@@ -140,90 +155,13 @@
                     </div>
                     <div class="tm-img-slider-item" href="static/images/image3.jpg">
                         <p class="tm-slider-caption"></p>
-                        <img src="static/images/image3.jpg" alt="Image" class="tm-slider-img">
+                        <img src="static/images/image3.jpg" alt="Image" class="tm-slider-img" height=50% width=50%>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- <section class="tm-section-2 tm-section-mb" id="tm-section-2">
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6 mb-lg-0 mb-md-5 mb-5 pr-md-5">
-                    <header class="text-center">
-                        <i class="fa fa-4x fa-power-off pl-5 pb-5 pr-5 pt-2"></i>
-                    </header> -->
-
-                    <!-- <h2>Lorem ipsum dolor</h2>
-                    <p>Central Template is provided by <a href="https://www.facebook.com/tooplate" target="_blank">Tooplate</a>. Vestibulum sit amet tortor velit.
-                        Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat
-                malesuada. </p>
-
-                    <a href="#tm-section-3" class="btn tm-btn-pad-2 float-right">Learn More</a>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 mb-lg-0 mb-md-5 mb-5 pr-md-5">
-                    <header class="text-center">
-                        <i class="fa fa-4x fa-bolt pl-5 pb-5 pr-5 pt-2"></i>
-                    </header>
-                    <h2>Lorem ipsum dolor</h2>
-                    <p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit.
-                        Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat
-                        malesuada.
-                    </p>
-
-                    <a href="#tm-section-4" class="btn tm-btn-pad-2 float-right">Learn More</a>
-                </div>
-
-                <div class="col-xl-4 col-lg-4 col-md-12">
-                    <h2>Nulla maximus hendrerit</h2>
-                    <p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit.</p>
-                    <p>Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada, iaculis est.</p>
-                    <p>+ Curabitur a massa malesuada, ullamcorper nisi tempus.</p>
-                    <p>+ Maecenas ultricies magna sed suscipit pulvinar.</p>
-                    <p>+ Nulla malesuada elit nec nisi aliquet pretium.</p>
-                </div>
-            </div> -->
-        <!-- </section> -->
-
-        <!-- <section class="tm-section-3 tm-section-mb" id="tm-section-3">
-            <div class="row">
-                <div class="col-md-6 tm-mb-sm-4 tm-2col-l">
-                    <div class="image">
-                        <img src="img/tm-img-1.jpg" class="img-fluid" />
-                    </div>
-                    <div class="tm-box-3">
-                        <h2>Lorem ipsum dolor</h2>
-                        <p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor
-                            velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat
-                            lacus placerat malesuada.</p>
-                        <div class="text-center">
-                            <a href="#tm-section-5" class="btn btn-big">Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 tm-2col-r">
-                    <div class="image">
-                        <img src="img/tm-img-2.jpg" class="img-fluid" />
-                    </div>
-                    <div class="tm-box-3">
-                        <header>
-                            <h2>Vestibulum sit amet</h2>
-                        </header>
-                        <p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor
-                            velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat
-                            lacus placerat malesuada.</p>
-                        <div class="text-center">
-                            <a href="#tm-section-5" class="btn btn-big">Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- <section class="tm-section-4 tm-section-mb" id="tm-section-4">
-            <div class="row">
-
-            </div>
-        </section> -->
+      
 
         <section class="tm-section-5" id="tm-section-5">
             <div class="row">
@@ -282,12 +220,12 @@
 
                 <div class="col-lg-5 col-md-5 col-xs-12 tm-contact-right">
                     <div class="tm-address-box">
-                        <h2 class="mb-4">Contact Us</h2>
+                        <h2 class="mb-4">FIND US AT</h2>
                         <p class="mb-5"></p>
                         <address>
-                            we are located at Nairobi West,
-                            <br> along Gandhi Avenue road,
-                            <br> opposite Summerdale inn.
+                            We are located at Nairobi West,
+                            <br> Along Gandhi Avenue road,
+                            <br> Opposite Summerdale inn.
                         </address>
                     </div>
                 </div>

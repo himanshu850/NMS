@@ -47,7 +47,7 @@ if($res){
                       ?>
                       <tr>
                           <td> <?php echo $row['id']; ?></td>
-                          <td> <?php echo '<img src ="data:image;base64,'.base64_encode($row['image']).'" alt="Image" style="width: 100%; height: 100%;" >'; ?></td> 
+                          <td> <?php echo '<img src ="data:image;base64,'.base64_encode($row['image']).'" alt="Image" style="width: 20%; height: 20%;" >'; ?></td> 
                       </tr>
                       <?php
                    }

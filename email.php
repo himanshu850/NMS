@@ -1,5 +1,6 @@
 <?php
  require_once('PHPMailer-5.2-stable/PHPMailerAutoload.php');
+ 
   
  $mail= new PHPMailer();
  $mail ->isSMTP();
@@ -16,6 +17,6 @@
  $mail ->Subject='NMS';
  $mail ->Body='this is to inform you that you have been chosen as a nanny!';
 
- $mail ->addAddress('gesareayienda@gmail.com');
+ $mail ->addAddress('himanshupparmar824@gmail.com');
  $mail ->send();
 ?>

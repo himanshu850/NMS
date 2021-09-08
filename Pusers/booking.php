@@ -28,6 +28,7 @@
 	<table class="table" style="width: 50%;">
 						<thead>
 						<th>UserNo</th>
+						<th>Image</th>
 						<th>Name</th>
 						<th>Email</th>
 						<th>Phone_no</th>
@@ -41,6 +42,7 @@
 						<th>Book</th>
 </thead>
 <tbody>
+
 <?php
  
 	$sql3 = "SELECT * FROM nanny_profile WHERE Status = 'free' ";
@@ -63,6 +65,7 @@
 		<form method="post" action="book.php" >
 				 <tr>
 				 <td><?php echo$userNo?></td>
+				 <td> <?php echo '<img src ="data:image;base64,'.base64_encode($rec['image']).'" alt="Image" style="width: 80px; height: 90px;" >'; ?></td>      
 				 <td><?php echo$name?></td>
 				 <td><?php echo$email?></td>
 				 <td><?php echo$phone_no?></td>

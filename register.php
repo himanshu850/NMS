@@ -34,7 +34,7 @@
       <input type="email" name="email" value="<?php echo $email ?>" placeholder="Email">
       <select name="role" style="width: 100%; height: 45px; margin: 20px border-radius:12px; auto;">
           <option value="" selected disabled>Role</option>
-                      <option value="Admin">Admin</option>
+                      <!-- <option value="Admin">Admin</option> -->
                       <option value="parent">parent</option>
                       <option value="nanny">nanny</option>
                   </select>
