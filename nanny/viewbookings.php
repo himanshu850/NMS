@@ -1,5 +1,5 @@
 
-<!-- <?php include(ROOT_PATH . '/Pusers/includes/head_section.php'); ?> -->
+
 
 <head>
 	<title>View Booking</title>
@@ -21,11 +21,9 @@
 <?php 
 	    $conn = mysqli_connect("localhost", "root", "", "nanny");
 		$id = $_SESSION['user_nanny']['UserID'];
-		//$sql = "SELECT * FROM parent WHERE userNo='$id'";
-		//$result = $conn->query($sql);
+		
 	    $sql4 = "SELECT * FROM nanny_profile WHERE Status = 'booked' ";
-	//$sql3 = "SELECT * FROM bookings";
-	//$result3 = $conn->query($sql3);
+	
 	
 	$result = $conn->query($sql4);
 	if ( $result) {

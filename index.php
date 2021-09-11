@@ -25,6 +25,7 @@
   header{
       background: white;
       text-align: center;
+      font-family: 'Noto Serif', serif;
   }
   .tm-address-box{
     background: white;
@@ -37,6 +38,7 @@
       height: 100px;
       
   }
+  
   </style>
     <!--
 
@@ -75,9 +77,9 @@
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
     </div>
-    <div class="container">
-        <section class="tm-section-head" id="top">
-            <header id="header" class="text-center tm-text-gray">
+    <div class="container" >
+        <section class="tm-section-head" id="top" font-family: 'Noto Serif', serif;>
+            <header id="header" class="text-center tm-text-gray" >
                 <h1>NANNY</h1>
                 <p>MANAGEMENT SYSTEM</p>
             </header>
@@ -175,21 +177,21 @@
                     <div class="media tm-media">
                         <img src="static/images/image1.jpg" class="img-responsive tm-media-img">
                         <div class="media-body tm-box-5">
-                            <h2></h2>
+                            <h2>holla!</h2>
                             <p class="mb-0"></p>
                         </div>
                     </div>
                     <div class="media tm-media">
                         <img src="static/images/image2.jpg" class="img-responsive tm-media-img">
                         <div class="media-body tm-box-5">
-                            <h2></h2>
+                            <h2>wassup</h2>
                             <p class="mb-0"></p>
                         </div>
                     </div>
                     <div class="media tm-media">
                         <img src="static/images/image3.jpg" class="img-responsive tm-media-img">
                         <div class="media-body tm-box-5">
-                            <h2></h2>
+                            <h2>hi hello</h2>
                             <p class="mb-0"> </p>
                         </div>
                     </div>

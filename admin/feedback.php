@@ -19,31 +19,31 @@
 	<table class="table">
 						<thead>
 						<th>FeedbackID</th>
-						<th>Department Of User</th>
-						<th>Feedback Message </th>
-						<th>Day Submitted</th>
-						<th>Date</th>
+						<th>UserNo</th>
+						<th>Name </th>
+						<th>Feedback</th>
+						
 </thead>
 <tbody>
 <?php
-    $conn = mysqli_connect("localhost", "root", "", "parking");
+    $conn = mysqli_connect("localhost", "root", "", "nanny");
+	//$UserNo =$_SESSION['user']['UserID'];
 	$sql3 = "SELECT * FROM feedback ";
 	$result3 = $conn->query($sql3);
 	if ($result3) {
 		 while($rec = $result3->fetch_assoc()) {
 			 
-				$FeedbackID= $rec['id'];
-				 $Department=$rec['Department'];
-				 $Message=$rec['Message'];
-				 $Day=$rec['Day'];
-				 $time=$rec['Submitted_at'];
+				 $FeedbackID= $rec['Id'];
+				 $userNo = $rec['userNo'];
+				 $name=$rec['name'];
+				 $feedback=$rec['feedback'];
+				
 		echo "
 				 <tr>
 				 <td>$FeedbackID</td>
-				 <td>$Department</td>
-				 <td>$Message</td>
-				 <td>$Day</td>
-				 <td>$time</td>
+				 <td>$userNo</td>
+				 <td>$name</td>
+				 <td>$feedback</td>
 			 </tr>
 
 				 ";

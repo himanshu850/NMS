@@ -6,7 +6,7 @@
 		<div class="card-content">
 			<a href="<?php echo BASE_URL . 'nanny/updateprofile.php' ?>">Update Profile</a>
 			<a href="<?php echo BASE_URL . 'nanny/viewbookings.php' ?>">View Bookings</a>
-			<a href="<?php echo BASE_URL . 'nanny/checkfeedback.php' ?>">Check Feedback</a>
+			<a href="<?php echo BASE_URL . 'nanny/checkfeedback.php' ?>">Write Feedback</a>
 		</div>
 	</div>
 </div>

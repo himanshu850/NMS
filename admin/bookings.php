@@ -36,7 +36,7 @@
 		<?php include(ROOT_PATH . '/admin/includes/menu.php') ?>
 		<!-- Middle form - to create and edit  -->
 		
-			<center><h1>USER BOOKINGS</h1></center>
+			<center><h1>PARENT PROFILES</h1></center>
 		<!-- // Middle form - to create and edit -->
 
 		<!-- Display records from DB-->
@@ -49,28 +49,40 @@
 			<?php else: ?>
 				<table class="table">
 					<thead>
-						<th>Booking ID</th>
-						<th>User ID</th>
-						<th>User Name</th>
-						<th>Slot</th>
+						<th>UserNo</th>
+						<th>Child Name</th>
+						<th>Email</th>
+						<th>Phone Number</th>
+						<th>Address</th>
+						<th>Gender</th>
+						<th>Nanny Type Required</th>
+						<th>Requirements</th>
 					</thead>
 					<tbody>
 					<?php
-					$conn = mysqli_connect("localhost", "root", "", "parking");
-					$sql3 = "SELECT * FROM bookings  ";
+					$conn = mysqli_connect("localhost", "root", "", "nanny");
+					$sql3 = "SELECT * FROM parent  ";
 					$result3 = $conn->query($sql3);
 
 				while($rec = $result3->fetch_assoc()): ?>
 						<tr>
-							<td><?php echo $rec['ID']; ?></td>
-							<td><?php echo $rec['useri']; ?></td>
-							<td><?php echo $rec['usern']; ?></td>
-							<td><?php echo $rec['slot']; ?></td>
+							<td><?php echo $rec['userNo']; ?></td>
+							<td><?php echo $rec['child_name']; ?></td>
+							<td><?php echo $rec['email']; ?></td>
+							<td><?php echo $rec['phone_no']; ?></td>
+							<td><?php echo $rec['address']; ?></td>
+							<td><?php echo $rec['gender']; ?></td>
+							<td><?php echo $rec['nanny_type']; ?></td>
+							<td><?php echo $rec['requirements']; ?></td>
+
 						</tr>
-						?>
+						
 					<?php endwhile ?>
 					</tbody>
 				</table>
+				<div class="text-center">
+    <button onclick ="window.print();" class="btn btn-primary" id="print-btn">Print</a>
+</div>
 			<?php endif ?>
 		</div>
 		<!-- // Display records from DB -->

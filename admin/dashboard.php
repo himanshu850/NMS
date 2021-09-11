@@ -101,7 +101,7 @@
 		</div>
 		<br><br><br>
 		<div class="buttons">
-			<a href="users.php">Add Users</a>
+			<a href="includes/user_data_print.php">Generate Report</a>
 			<!-- <a href="add_slots.php">Add slots</a>
 			<a href="feedback.php">View Feedback</a> -->
 		</div>
