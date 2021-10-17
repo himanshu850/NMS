@@ -1,3 +1,10 @@
+<?php  include('../config.php'); ?>
+<?php  include('../Pusers/includes/user_function.php'); 
+     if (!isLoggedIn()) {
+		$_SESSION['msg'] = "You must log in first";
+		header('location:../login.php');
+	}?>
+
 <?php
 require_once('../PHPMailer-5.2-stable/PHPMailerAutoload.php');
  
@@ -41,5 +48,21 @@ $conn = mysqli_connect("localhost", "root", "", "nanny");
 		echo"<script>alert('Unknown error has occured')</script>";
 	}
 	}	
+	?>
+
+	<?php 
+	
+		if(isset($_GET['book'])){
+			$conn = mysqli_connect("localhost", "root", "", "nanny");
+          $nanny_id=$_GET['book'];
+		  $user_id=$_SESSION['user']['UserID'];
+
+
+		  $sql= "INSERT INTO `booking`( `nanny_id`, `parent_id`) VALUES ('$nanny_id','$user_id')";
+		  $query = mysqli_query($conn,$sql);
+
+
+		}
+	
 	?>
  

@@ -79,6 +79,11 @@
 						
 					<?php endwhile ?>
 					</tbody>
+					<style>
+		 table,th, td { border-collapse: collapse; width: 70%; margin: 20px auto;
+ text-align: center; padding: 8px; text-align: left; border: 2px solid black; } 
+	     </style>
+
 				</table>
 				<div class="text-center">
     <button onclick ="window.print();" class="btn btn-primary" id="print-btn">Print</a>

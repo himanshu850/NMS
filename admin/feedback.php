@@ -23,12 +23,13 @@
 						<th>Name </th>
 						<th>Feedback</th>
 						
+						
 </thead>
 <tbody>
 <?php
     $conn = mysqli_connect("localhost", "root", "", "nanny");
 	//$UserNo =$_SESSION['user']['UserID'];
-	$sql3 = "SELECT * FROM feedback ";
+	$sql3 = "SELECT * FROM `feedback`  ";
 	$result3 = $conn->query($sql3);
 	if ($result3) {
 		 while($rec = $result3->fetch_assoc()) {
@@ -37,14 +38,16 @@
 				 $userNo = $rec['userNo'];
 				 $name=$rec['name'];
 				 $feedback=$rec['feedback'];
+				 
 				
 		echo "
-				 <tr>
+			<tr>
 				 <td>$FeedbackID</td>
 				 <td>$userNo</td>
 				 <td>$name</td>
 				 <td>$feedback</td>
-			 </tr>
+				 <td> <button></button></td>
+			</tr>
 
 				 ";
 			}

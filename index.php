@@ -1,5 +1,5 @@
 <?php require_once('config.php') ?>
-<?php require_once( ROOT_PATH . '/includes/registration_login.php') ?>
+<?php require_once(ROOT_PATH . '/includes/registration_login.php') ?>
 
 <!DOCTYPE html>
 <html>
@@ -11,35 +11,57 @@
 
     <title>Nanny Management System</title>
     <style type="text/css">
-  body{
-    background-image:url(static/images/earth.jpg);
-    background-size:cover;
-    background-attachment: fixed;
-  }
-  .content{
-    background: white;
-    width: 50%;
-    padding: 40px:
-    margin: 100px auto;
-  }
-  header{
-      background: white;
-      text-align: center;
-      font-family: 'Noto Serif', serif;
-  }
-  .tm-address-box{
-    background: white;
-    height: 280px;
-  }
-  .mt-5{
-    background: white;
-  }
-  .image fit{
-      height: 100px;
-      
-  }
-  
-  </style>
+        body {
+            background-image: url(static/images/earth.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .content {
+            background: white;
+            width: 50%;
+            padding: 40px;
+            margin: 100px auto;
+        }
+
+        header {
+            background: white;
+            text-align: center;
+            font-family: 'Noto Serif', serif;
+        }
+
+        .tm-address-box {
+            background: white;
+            height: 280px;
+        }
+
+        h2 {
+            font-size: 100% !important;
+            font-family: georgia, garamond, serif;
+            font-style: italic;
+        }
+
+        .mt-5 {
+            background: white;
+        }
+
+        .height {
+            height: 10px !important;
+        }
+
+        #image fit {
+            height: 10px !important;
+
+        }
+
+        #img1 {
+            width: 25% !important;
+        }
+
+        #img2 {
+            height: 100% !important;
+        }
+    </style>
     <!--
 
     Template 2103 Central
@@ -60,8 +82,8 @@
     <script>
         var renderPage = true;
 
-        if (navigator.userAgent.indexOf('MSIE') !== -1
-            || navigator.appVersion.indexOf('Trident/') > 0) {
+        if (navigator.userAgent.indexOf('MSIE') !== -1 ||
+            navigator.appVersion.indexOf('Trident/') > 0) {
             /* Microsoft Internet Explorer detected in. */
             alert("Please view this in a modern browser such as Chrome or Microsoft Edge.");
             renderPage = false;
@@ -77,9 +99,9 @@
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
     </div>
-    <div class="container" >
-        <section class="tm-section-head" id="top" font-family: 'Noto Serif', serif;>
-            <header id="header" class="text-center tm-text-gray" >
+    <div class="container">
+        <section class="tm-section-head" id="top" font-family: 'Noto Serif' , serif;>
+            <header id="header" class="text-center tm-text-gray">
                 <h1>NANNY</h1>
                 <p>MANAGEMENT SYSTEM</p>
             </header>
@@ -88,8 +110,7 @@
                 <a class="navbar-brand tm-text-gray" href="#">
                     Menu
                 </a>
-                <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon">
                         <i class="fa fa-navicon tm-fa-toggler-icon"></i>
                     </span>
@@ -157,19 +178,19 @@
                     </div>
                     <div class="tm-img-slider-item" href="static/images/image3.jpg">
                         <p class="tm-slider-caption"></p>
-                        <img src="static/images/image3.jpg" alt="Image" class="tm-slider-img" height=50% width=50%>
+                        <img src="static/images/image3.jpg" alt="Image" class="tm-slider-img" id="height">
                     </div>
                 </div>
             </div>
         </section>
 
-      
+
 
         <section class="tm-section-5" id="tm-section-5">
             <div class="row">
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="image fit">
-                        <img src="static/images/nanny.jpg" class="img-fluid">
+                        <img src="static/images/nanny pic.jpg" class="img-fluid">
                     </div>
                 </div>
 
@@ -177,21 +198,23 @@
                     <div class="media tm-media">
                         <img src="static/images/image1.jpg" class="img-responsive tm-media-img">
                         <div class="media-body tm-box-5">
-                            <h2>holla!</h2>
+                            <h2>Our Carers & Therapy Assistants are qualified and experienced professionals that are passionate about creating a difference in your childs and families lives.We work with you to find the right care & therapy assistant for your unique needs. We understand how important your relationship is with your care professional and you have the final decision in who supports your family.</h2>
                             <p class="mb-0"></p>
                         </div>
                     </div>
                     <div class="media tm-media">
-                        <img src="static/images/image2.jpg" class="img-responsive tm-media-img">
+                        <img src="static/images/image2.jpg" class="img-responsive tm-media-img" id="img1">
                         <div class="media-body tm-box-5">
-                            <h2>wassup</h2>
+                            <h2>Throughout history, people have been relying on the help and care that nannies provide. Early on, nannies, which were known as nurses, were typically servants in large households.
+
+                                Nannies often stayed with families for years, even helping to raise generations. Today, nannies may live in or out of the family home and are more integrated into the family structure</h2>
                             <p class="mb-0"></p>
                         </div>
                     </div>
                     <div class="media tm-media">
                         <img src="static/images/image3.jpg" class="img-responsive tm-media-img">
                         <div class="media-body tm-box-5">
-                            <h2>hi hello</h2>
+                            <h2>Our care professionals have direct experience caring for children with special needs and use their education and training to ensure each child can reach their potential.Our highly trained care & therapy support professionals have direct experience caring for children with special needs and use their education and training to ensure each child can reach his or her potential.</h2>
                             <p class="mb-0"> </p>
                         </div>
                     </div>
@@ -206,10 +229,10 @@
                         <form action="" method="post" class="contact-form">
                             <div class="row mb-2">
                                 <div class="form-group col-xl-6">
-                                    <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name" required/>
+                                    <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name" required />
                                 </div>
                                 <div class="form-group col-xl-6 pl-xl-1">
-                                    <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email" required/>
+                                    <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email" required />
                                 </div>
                             </div>
                             <div class="form-group">
@@ -277,19 +300,19 @@
             }
         }
 
-        $(document).ready(function () {
+        $(document).ready(function() {
             if (renderPage) {
                 $('body').addClass('loaded');
             }
 
             setCarousel();
 
-            $(window).resize(function () {
+            $(window).resize(function() {
                 setCarousel();
             });
 
             // Close menu after link click
-            $('.nav-link').click(function () {
+            $('.nav-link').click(function() {
                 $('#mainNav').removeClass('show');
             });
 
@@ -299,11 +322,10 @@
                 // Remove links that don't actually link to anything
                 .not('[href="#"]')
                 .not('[href="#0"]')
-                .click(function (event) {
+                .click(function(event) {
                     // On-page links
                     if (
-                        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-                        &&
+                        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
                         location.hostname == this.hostname
                     ) {
                         // Figure out element to scroll to
@@ -315,7 +337,7 @@
                             event.preventDefault();
                             $('html, body').animate({
                                 scrollTop: target.offset().top + 1
-                            }, 1000, function () {
+                            }, 1000, function() {
                                 // Callback after animation
                                 // Must change focus!
                                 var $target = $(target);
