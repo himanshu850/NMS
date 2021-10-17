@@ -1,1 +1,1 @@
-AddType application/x-httpd-php .html .htm
+RewriteRule ^([^.]+)\.html$ $1.php [L]
