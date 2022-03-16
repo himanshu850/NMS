@@ -63,7 +63,7 @@ $_SESSION['username']= $username;
   function getUserById($id)
   {
     global $db;
-    $sql = "SELECT * FROM users WHERE id=$id LIMIT 1";
+    $sql = "SELECT * FROM users WHERE UserID=$id LIMIT 1";
 
     $result = mysqli_query($db, $sql);
     $user = mysqli_fetch_assoc($result);
@@ -188,5 +188,3 @@ $_SESSION['username']= $username;
 		}
 
 	}
-
-?>
