@@ -10,7 +10,7 @@
  $mail ->Port='465';
  $mail ->isHTML();
  $mail ->Username='nannymanagement.system@gmail.com';
- $mail ->Password='nanny@parmar';
+ $mail ->Password='';
  $mail ->setFrom('no-reply@gmail.com');
 
  //message

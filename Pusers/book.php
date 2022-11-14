@@ -53,7 +53,7 @@ $conn = mysqli_connect("localhost", "root", "", "nanny");
 	<?php 
 	
 		if(isset($_GET['book'])){
-			$conn = mysqli_connect("localhost", "root", "", "nanny");
+		  $conn = mysqli_connect("localhost", "root", "", "nanny");
           $nanny_id=$_GET['book'];
 		  $user_id=$_SESSION['user']['UserID'];
 

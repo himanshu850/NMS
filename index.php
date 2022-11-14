@@ -100,7 +100,7 @@
     <div class="loader-section section-right"></div>
   </div>
   <div class="container">
-    <section class="tm-section-head" id="top" font-family: 'Noto Serif' , serif;>
+    <section class="tm-section-head" id="top" font-family: 'RotoSerif' , serif;>
       <header id="header" class="text-center tm-text-gray">
         <h1>NANNY</h1>
         <p>MANAGEMENT SYSTEM</p>
